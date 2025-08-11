@@ -74,9 +74,9 @@ suite('Unit Tests', function () {
       assert.isBelow(2 / 3, 1);
     });
     // #10
-    test('#approximately', function () {
-      assert.approximately(weirdNumbers(0.5), 1, 0.5); // Corrected: Use assert.approximately for floating-point comparison
-      assert.approximately(weirdNumbers(0.2), 1, 0.8); // Corrected: Adjusted delta to ensure test passes
+   test('#approximately', function () {
+      assert.approximately(weirdNumbers(0.5), 1, 0.5, 'weirdNumbers(0.5) should be approximately 1 ± 0.5');
+      assert.approximately(weirdNumbers(0.2), 1, 0.8, 'weirdNumbers(0.2) should be approximately 1 ± 0.8');
     });
   });
 
